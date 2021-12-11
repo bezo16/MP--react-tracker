@@ -1,18 +1,26 @@
 import { useEffect, useState } from "react"
+import styles from '../styles/train.module.css'
+import { useRouter } from "next/router"
 
 
 export default function Home() {
 
-    const [steps,setSteps] = useState(0)
+    const router = useRouter()
+    const [km,setKm] = useState(0)
     const [jumps,setJumps] = useState(0)
+    const [height,setHeight] = useState(0)
+
 
     useEffect(() => {
-        console.log('prepare to train bitch')
+        setHeight(localStorage.getItem('height'))
     },[])
 
+
     function updateSteps() {
+        let steps = Math.floor((km * 1000) / ((height * 0.75) / 188))
         localStorage.setItem('steps',Number(localStorage.getItem('steps')) + Number(steps))
-        setSteps(0)
+        setKm(0)
+        router.push('/')
     }
 
     function updateJumps() {
@@ -24,15 +32,14 @@ export default function Home() {
     return (
       <main>
         <section className="training">
-            <div>
-                <h3>Walk trainig</h3>
-                <input type="number" value={steps} onChange={(e) => setSteps(e.target.value)} placeholder="how much steps u hv made" />
-                <button onClick={updateSteps}>Enter {steps}</button>
-            </div>
-            <div>
-                <h3>Jumping trainig</h3>
-                <input type="number" value={jumps} onChange={(e) => setJumps(e.target.value)} placeholder="how much steps u hv made" />
-                <button onClick={updateJumps}>Enter {jumps}</button>
+            <div className={styles.cards}>
+                <div className={styles.card}>
+                    <h3 className={styles['card-title']}>Walking</h3>
+                    <label className={styles['card-label']} htmlFor="walking">How much km u hv walked?</label>
+                    <input className={styles['card-input']} id="walking" type="number" value={km} onChange={(e) => setKm(e.target.value)}/>
+                    <button className={styles['card-button']} onClick={updateSteps}>Finish Training</button>
+                </div>
+               
             </div>
         </section>
       </main>

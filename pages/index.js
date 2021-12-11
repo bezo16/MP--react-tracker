@@ -10,6 +10,7 @@ export default function Home() {
   const [registerHeight,setRegisterHeight] = useState(0)
 
   useEffect(() => {
+    // localStorage.clear()
     setSteps(Number(localStorage.getItem('steps')))
     setJumps(Number(localStorage.getItem('jumps')))
     setRegistered(localStorage.getItem('registered'))
@@ -23,9 +24,9 @@ export default function Home() {
   function register(e) {
     e.preventDefault()
     if(registerHeight > 50) {
-      console.log('registrol som ho')
       localStorage.setItem('height',registerHeight)
       localStorage.setItem('registered',true)
+      setRegistered(true)
     }
   }
 
@@ -69,7 +70,7 @@ export default function Home() {
           <div className="overview-card">
             <h3 className="overview-card__title">
             Calories
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627  0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.848 12.459c.202.038.202.333.001.372-1.907.361-6.045 1.111-6.547 1.111-.719 0-1.301-.582-1.301-1.301 0-.512.77-5.447   1.125-7.445.034-.192.312-.181.343.014l.985 6.238 5.394 1.011z"/></svg>
+            <svg width="24" height="24"><path d="M5.521 8.974c-.332-.583-.521-1.257-.521-1.974 0-1.899 1.326-3.49 3.102-3.898.408-1.776 1.999-3.102 3.898-3.102s3.49 1.326 3.898 3.102c1.776.408 3.102 1.999 3.102 3.898 0 .717-.189 1.391-.521 1.973.327.423.521.952.521 1.527 0 1.309-1.007 2.385-2.289 2.491l-.002.009c-.235.855-2.394 8.694-2.67 9.538-.349.953-1.175 1.462-2.039 1.462-.853 0-1.683-.497-2.039-1.462-.26-.801-2.221-7.91-2.673-9.547-1.281-.107-2.288-1.183-2.288-2.491 0-.575.194-1.104.521-1.526zm10.991 1.026h-9.012c-.275 0-.5.224-.5.5s.225.5.5.5h1.327c.061.218 2.945 10.693 3.031 10.899.064.144.238.13.291-.014.095-.293 1.172-4.107 1.617-5.719.453-1.639 1.408-5.166 1.408-5.166h1.338c.271-.006.488-.228.488-.5s-.217-.493-.488-.5zm.214-1.99c.174-.296.274-.642.274-1.01 0-1.263-1.116-2.493-3-2 .471-1.549-.557-2.997-2-3-1.004-.002-1.797.759-2.06 1.637 1.103.721 1.615 1.975 1.443 3.363-.939-2.985-4.383-2.268-4.383 0 0 .368.1.714.274 1.01l.226-.01h9.065v.001l.161.009z"/></svg>
             </h3>
             <p className="overview-card__count">{calories} calories burned</p>
           </div>
