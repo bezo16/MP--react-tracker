@@ -49,7 +49,10 @@ background-size: cover;
 
 header {
   background: var(--black1);
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px 10px 15px;
   margin-bottom: 120px;
   color: var(--orange1);
 }
@@ -60,7 +63,7 @@ header a {
 
 main {
   min-height: calc(100vh - 80px);
-  width: 90%;
+  width: 95%;
   margin: 0px auto;
 }
 
@@ -94,7 +97,7 @@ main {
 .overview-card {
   background: var(--black1);
   width: 330px;
-  margin: 10px 0px;
+  margin: 10px 4px;
   height: 300px;
   border-radius: 10px;
   text-align: center;
