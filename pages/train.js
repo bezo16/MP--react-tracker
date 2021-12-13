@@ -22,30 +22,60 @@ export default function Train() {
 
 
     function updateWalking() {
+        let date = new Date()
         let steps = Math.floor((km * 1000) / ((height * 0.75) / 188))
-        if(km && walkTime) {
+        if(km > 0 && walkTime > 0) {
             localStorage.setItem('steps',Number(localStorage.getItem('steps')) + Number(steps))
             localStorage.setItem('time',Number(localStorage.getItem('time')) + Number(walkTime))
-            setKm(0)
+            if(!localStorage.getItem('logs')) localStorage.setItem('logs', '[]')
+            let logs = JSON.parse(localStorage.getItem('logs'))
+            logs.push({
+                date:`${date.getMonth() + 1}.${date.getDate()}`,
+                walk: km,
+                time: walkTime,
+                hours: date.getHours(),
+                minutes: date.getMinutes(),
+            })
+            localStorage.setItem('logs',JSON.stringify(logs))
             router.push('/')
         }
     }
 
     function updateRun() {
+        let date = new Date()
         let steps = Math.floor((runKm * 1000) / (height  / 188))
-        if(runKm && runTime) {
+        if(runKm > 0 && runTime > 0) {
             localStorage.setItem('run',Number(localStorage.getItem('run')) + Number(steps))
-            localStorage.setItem('time',Number(localStorage.getItem('time')) + Number(walkTime))
-            setRunKm(0)
+            localStorage.setItem('time',Number(localStorage.getItem('time')) + Number(runTime))
+            if(!localStorage.getItem('logs')) localStorage.setItem('logs', '[]')
+            let logs = JSON.parse(localStorage.getItem('logs'))
+            logs.push({
+                date:`${date.getMonth() + 1}.${date.getDate()}`,
+                run: runKm,
+                time: runTime,
+                hours: date.getHours(),
+                minutes: date.getMinutes(),
+            })
+            localStorage.setItem('logs',JSON.stringify(logs))
             router.push('/')
         }
     }
 
     function updateJumps() {
-        if(jumps && jumpTime) {
+        let date = new Date()
+        if(jumps > 0 && jumpTime > 0) {
             localStorage.setItem('jumps',Number(localStorage.getItem('jumps')) + Number(jumps))
             localStorage.setItem('time',Number(localStorage.getItem('time')) + Number(jumpTime))
-            setJumps(0)
+            if(!localStorage.getItem('logs')) localStorage.setItem('logs', '[]')
+            let logs = JSON.parse(localStorage.getItem('logs'))
+            logs.push({
+                date:`${date.getMonth() + 1}.${date.getDate()}`,
+                jumps: jumps,
+                time: jumpTime,
+                hours: date.getHours(),
+                minutes: date.getMinutes(),
+            })
+            localStorage.setItem('logs',JSON.stringify(logs))
             router.push('/')
         }
     }
