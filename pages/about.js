@@ -18,7 +18,7 @@ import style from '../styles/about.module.css'
                 </div>
                 <div className={style.card}>
 
-                <h2>my tech stack:</h2>
+                <h2 className={style.subtitle}>my tech stack:</h2>
                 <p className={style.paragrapg}>
 
 A.NET (A#/A sharp)

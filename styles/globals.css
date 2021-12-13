@@ -159,3 +159,60 @@ main {
 .hiden {
   display: none;
 }
+
+.unregistered h1 {
+  font-size: 2.75rem;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.unregistered p {
+  max-width: 500px;
+  margin: 0px auto;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.unregistered form {
+  max-width: 500px;
+  width: 100%;
+  margin: 0px auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.unregistered form label {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.unregistered form input {
+  width: 200px;
+  padding: 5px 15px;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.unregistered form button {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--orange3);
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+.unregistered form button:hover {
+  background: var(--orange1);
+  color: var(--black1);
+}
+
+
+.unregistered svg {
+  fill: var(--orange1);
+  margin: 20px auto;
+  display: block;
+}
