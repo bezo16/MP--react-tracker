@@ -13,6 +13,7 @@ import styles from '../styles/logs.module.css'
     return (
         <main className="logs">
             <h1>logs pojebane</h1>
+            
             {
                 logs.map((log,index) => 
                 <div key={index} className={styles.log}>

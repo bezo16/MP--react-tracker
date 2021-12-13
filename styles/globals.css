@@ -59,6 +59,13 @@ background-size: cover;
   
 }
 
+footer h2 {
+  color: rgb(121, 117, 117);
+  text-align: center;
+  font-size: 0.85rem;
+  padding-bottom: 10px;
+}
+
 header {
   background: var(--black1);
   display: flex;
