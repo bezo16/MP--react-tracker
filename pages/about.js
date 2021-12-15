@@ -9,12 +9,12 @@ import style from '../styles/about.module.css'
             <main>
                 <div className={style.card}>
                   <h1 className={style.title}>BEZOEXXS16</h1>
-                  <p className={style.paragrapg}>its revolutionary app which will help u track exercise (only for retards)</p>
+                  <p className={style.paragrapg}>its revolutionary app which will help u track exercise (only for temp)</p>
                 </div>
                 <div className={style.card}>
                   <h2 className={style.subtitle}>Bezo16</h2>
-                  <p className={style.paragrapg}>very passionate front end developer backend developer devops developer developer developer security developer big cunt and creator of this useless fkin shit</p>
-                  <p className={style.paragrapg}>im 70 years old im programing since 1 tyžden of birth im ultra talented and my hour rate is 20000000000000000000000000000€</p>
+                  <p className={style.paragrapg}>very passionate front end developer backend developer devops developer developer developer security developer big temp and creator of this temp temp temp</p>
+                  <p className={style.paragrapg}>im temp(21) years old im programing since temp of birth im ultra talented and my hour rate is temp</p>
                 </div>
                 <div className={style.card}>
 

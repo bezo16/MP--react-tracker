@@ -40,7 +40,7 @@ export default function Home() {
     <main>
       <div className={`unregistered ${registered ? 'hiden' : ''}`}>
         <h1>BEZOEXCS16</h1>
-        <p>is new gen exercise tracker which can track your steps,burned calories and motivate you to your goal ! created by excelent fullštak developer terkaPHP, jk hes cunt created ofc by bezo16 the biggest cunt on the planet</p>
+        <p>is new gen exercise tracker which can track your steps,burned calories and motivate you to your goal ! created by excelent fullštak developer terkaPHP, jk hes temp created ofc by bezo16 the biggest temp on the planet</p>
         <p>before you can use this very cool app we will ned some footsteps calibration, below enter your height in cm and you are good to go!</p>
         <form onSubmit={register}>
           <label htmlFor="height">Your height:</label>

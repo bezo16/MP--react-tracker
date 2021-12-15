@@ -14,7 +14,7 @@ import styles from '../styles/logs.module.css'
             <h1>logs pojebane</h1>
             
             {
-                logs?.map((log,index) => 
+                logs.map((log,index) => 
                 <div key={index} className={styles.log}>
                     <span className={styles['log-date']}>{String(log.hours).padStart(2, '0')}:{String(log.minutes).padStart(2 , '0')}</span>
                     <span className={styles['log-time']}>{log.time}
