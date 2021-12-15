@@ -11,7 +11,7 @@ import styles from '../styles/logs.module.css'
 
     return (
         <main className="logs">
-            <h1>logs pojebane</h1>
+            <h1>logs </h1>
             
             {
                 logs.map((log,index) => 
